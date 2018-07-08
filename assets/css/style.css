@@ -1,0 +1,147 @@
+/*
+Tutorial Name: Scroll To Top Then Fixed Navigation Effect With JQuery and CSS
+https://stanhub.com/scroll-to-top-then-fixed-navigation-effect-with-jquery-and-css-free-download/
+Description: Create a sticky navigation bar that remains fixed to the top after scroll
+Author: Stan Kostadinov
+Author URI: https://stanhub.com
+Version: 1.0.0 - 11.01.2014
+*/
+
+* {margin: 0; padding: 0;}
+
+a {text-decoration: none;}
+
+/* This class is added on scroll */
+.fixed {
+	position: fixed;
+	top: 0;
+	height: 70px;
+	z-index: 1;
+}
+
+body {
+	color: #fff;
+	font-size: 12px;
+	text-align: center;
+	/* Smoke */
+	margin: 0;
+	padding: 0;
+	font-family: 'Cardo', serif;
+}
+
+  /* Smoke Effect */
+  .smoke {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+  }
+  
+  .smoke ul {
+	margin: 0;
+	padding: 0;
+	display: flex;
+  }
+  
+  .smoke ul li {
+	list-style: none;
+	font-weight: bold;
+	letter-spacing: 10px;
+	filter: blur(1px);
+	color: #77d1dc;
+	font-size: 6em;
+	display: inline-block;
+  }
+  
+  .smoke ul:hover li {
+	animation: smoke 2s linear forwards;
+	transition-duration: 6s;
+	transition-delay: 3s;
+  }
+  
+  @keyframes smoke {
+	0% {
+	  transform: rotate(0deg) translateY(0px);
+	  opacity: 1;
+	  filter: blur(1px);
+	}
+	100% {
+	  transform: rotate(45deg) translateY(-200px);
+	  opacity: 0;
+	  filter: blur(20px);
+	}
+  }
+  
+  .smoke ul li:nth-child(1) {
+	animation-delay: 0s;
+  }
+  .smoke ul li:nth-child(2) {
+	animation-delay: 0s;
+  }
+  .smoke ul li:nth-child(3) {
+	animation-delay: 0s;
+  }
+  .smoke ul li:nth-child(4) {
+	animation-delay: 0s;
+  }
+  .smoke ul li:nth-child(5) {
+	animation-delay: 0s;
+  }
+  
+
+/* Navigation Settings */
+nav {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 70px;
+	font-size: 18px;
+	background: #fff;
+}
+
+nav li {
+	display: inline-block;
+	padding: 24px 10px;
+}
+
+nav li a {
+	color: #757575;
+	text-transform: uppercase;
+}
+
+section {
+	height: 100vh;
+}
+
+/* Screens Settings */
+#screen1 {
+	background-image:url('../images/colored-smoke-art-1020315.jpg');
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+  	-o-background-size: cover;
+	background-size: cover;
+}
+
+#screen1 p {
+	padding-top: 200px;
+}
+
+#screen2 {
+	background-image: linear-gradient( #010f3d, #305fdb);
+}
+
+#screen3 {
+	background-image: linear-gradient(#305fdb, 60%, #fa635d);
+}
+
+@media only screen and (max-width: 520px) {
+
+	nav li {
+		padding: 24px 4px;
+	}
+
+	nav li a {
+		font-size: 14px;
+	}
+
+}
