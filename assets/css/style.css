@@ -134,6 +134,10 @@ section {
 	background-image: linear-gradient(#305fdb, 60%, #fa635d);
 }
 
+#screenInbetween {
+	background-color: whitesmoke;
+}
+
 @media only screen and (max-width: 520px) {
 
 	nav li {
